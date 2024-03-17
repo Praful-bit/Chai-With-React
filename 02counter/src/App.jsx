@@ -7,13 +7,17 @@ function App() {
   let [Counter, setCounter] = useState(15);
 
   const addValue = () => {
-    setCounter(Counter + 1);
-    console.log("clicked", Counter);
+    if (Counter < 20) {
+      setCounter(Counter + 1);
+      console.log("clicked", Counter);
+    }
   };
 
   const removeValue = () => {
-    setCounter(Counter - 1);
-    console.log("clicked", Counter);
+    if (Counter > 0) {
+      setCounter(Counter - 1);
+      console.log("clicked", Counter);
+    }
   };
 
   return (
