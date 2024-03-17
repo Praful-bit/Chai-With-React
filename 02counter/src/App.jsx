@@ -1,12 +1,18 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function App() {
-  let [Counter,setCounter] = useState(15)
+  let [Counter, setCounter] = useState(15);
 
   const addValue = () => {
-    setCounter(Counter + 1)
+    setCounter(Counter + 1);
+    console.log("clicked", Counter);
+  };
+
+  const removeValue = () => {
+    setCounter(Counter - 1);
     console.log("clicked", Counter);
   };
 
@@ -18,7 +24,7 @@ function App() {
       <button onClick={addValue}>Add value{Counter}</button>
       <br />
       <hr />
-      <button>Remove value{Counter}</button>
+      <button onClick={removeValue}>Remove value{Counter}</button>
       <p>footer:- {Counter}</p>
     </>
   );
