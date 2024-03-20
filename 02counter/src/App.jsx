@@ -1,7 +1,5 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import "./App.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function App() {
   let [Counter, setCounter] = useState(15);
